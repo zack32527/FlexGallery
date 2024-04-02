@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-image: url(../zachbryanimages/background.jpg);
+    background-attachment: fixed;
+
+}
+body{
+    background-color: rgba(222, 184, 135, 0.507);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+    border-bottom: 2px ridge rgb(63, 40, 18);
+    display: flex;
+    align-items: center;
+}
+header img{
+    max-width: 20%;
+    display: flex;
+    margin: 3em;
+    border: 2px ridge goldenrod;
+    border-radius: 3em;
+}
+header h2{
+    color: rgb(255, 255, 255);
+    font-size: 300%;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+
+
+/* Image Gallery*/
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    max-width: 100%;
+    border: 2px ridge goldenrod;
+    border-radius: 10px;
+  }
+
+  #cornerBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 1em 2em;
+    background-color: orangered;
+    border: orangered;
+    border-radius: 10px;
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+  }
+
+  #cornerBtn:hover{
+    background-color: black;
+    color: orangered;
+    border: 2px ridge goldenrod;
+
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .column img{
+        max-width: 100%;
+    }
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
